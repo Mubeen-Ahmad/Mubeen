@@ -1,41 +1,104 @@
-/* General Styles */
-* { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
-body { background: linear-gradient(135deg, #1e3c72, #2a5298); color: white; text-align: center; padding: 20px; }
-header { font-size: 28px; font-weight: bold; margin-bottom: 20px; }
-
-/* Container */
-.container { 
-    max-width: 800px; 
-    margin: auto; 
-    background: rgba(255, 255, 255, 0.1); 
-    padding: 20px; 
-    border-radius: 10px; 
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); 
+/* Reset & Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #f4f7f6;
+  color: #333;
+  line-height: 1.6;
 }
 
-/* Topic Styles */
-.topic { 
-    margin: 15px 0; 
-    padding: 15px; 
-    background: rgba(255, 255, 255, 0.2); 
-    border-radius: 8px; 
-    transition: 0.3s; 
-    cursor: pointer;
+/* Header Styles */
+.header {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: #fff;
+  padding: 2rem 1rem;
+  text-align: center;
 }
-.topic:hover { background: rgba(255, 255, 255, 0.3); transform: scale(1.05); }
-
-.topic a { 
-    color: yellow; 
-    text-decoration: none; 
-    font-size: 18px; 
-    font-weight: bold; 
+.header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
 }
-.topic a:hover { text-decoration: underline; }
+.header p {
+  font-size: 1.2rem;
+}
 
-/* Footer */
-footer { 
-    margin-top: 20px; 
-    font-size: 14px; 
-    opacity: 0.8; 
+/* Main Content Styles */
+.main-content {
+  padding: 2rem;
+}
+.topics {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.topics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 1.5rem;
+}
+
+/* Topic Card Styles */
+.topic-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.topic-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+.topic-card .card-content {
+  padding: 1rem;
+}
+.topic-card h3 {
+  color: #1e3c72;
+  margin-bottom: 0.5rem;
+}
+.topic-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+.topic-card .card-footer {
+  background: #f7f7f7;
+  padding: 0.8rem 1rem;
+  text-align: right;
+}
+.topic-card .card-footer a {
+  text-decoration: none;
+  color: #1e3c72;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+.topic-card .card-footer a:hover {
+  color: #ff6f61;
+}
+
+/* Footer Styles */
+.footer {
+  background: #1e3c72;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 2rem;
+  }
+  .header p {
+    font-size: 1rem;
+  }
 }
 
