@@ -1,0 +1,41 @@
+/* General Styles */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+body { background: linear-gradient(135deg, #1e3c72, #2a5298); color: white; text-align: center; padding: 20px; }
+header { font-size: 28px; font-weight: bold; margin-bottom: 20px; }
+
+/* Container */
+.container { 
+    max-width: 800px; 
+    margin: auto; 
+    background: rgba(255, 255, 255, 0.1); 
+    padding: 20px; 
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); 
+}
+
+/* Topic Styles */
+.topic { 
+    margin: 15px 0; 
+    padding: 15px; 
+    background: rgba(255, 255, 255, 0.2); 
+    border-radius: 8px; 
+    transition: 0.3s; 
+    cursor: pointer;
+}
+.topic:hover { background: rgba(255, 255, 255, 0.3); transform: scale(1.05); }
+
+.topic a { 
+    color: yellow; 
+    text-decoration: none; 
+    font-size: 18px; 
+    font-weight: bold; 
+}
+.topic a:hover { text-decoration: underline; }
+
+/* Footer */
+footer { 
+    margin-top: 20px; 
+    font-size: 14px; 
+    opacity: 0.8; 
+}
+
