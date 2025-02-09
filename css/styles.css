@@ -1,0 +1,237 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base Styles */
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: #ffffff;
+  color: #333;
+  line-height: 1.6;
+  
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header / Navbar */
+.header {
+  background: #ffffff;
+  padding: 15px 0;
+  border-bottom: 1px solid #ddd;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1d72b3; /* Accent color */
+  margin-left: 10px;
+}
+.navbar ul {
+  list-style: none;
+  display: flex;
+}
+.navbar li {
+  margin-left: 20px;
+}
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+.navbar a:hover {
+  color: #1d72b3;
+}
+
+/* Hero Section (Index Page) */
+.hero {
+  background:#1d72b3;
+  height: 60vh;
+  padding-top: 100px; /* For fixed header */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  color: #ffffff;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(236, 37, 82, 0.15);
+}
+.hero .hero-content {
+  position: relative;
+  z-index: 1;
+}
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+.hero p {
+  font-size: 1.2rem;
+}
+
+/* Hero Small (for Detail and About Pages) */
+.hero-small {
+  background: #1d72b3;
+  padding: 60px 0 20px;
+  margin-top: 100px; /* Space for fixed header */
+  text-align: center;
+  color: #ffffff;
+}
+.hero-small h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+.hero-small p {
+  font-size: 1.1rem;
+}
+
+/* Courses Section (Index Page) */
+.courses-section {
+  padding: 80px 0;
+  background: #f8f9fa;
+  margin-top: 20px;
+}
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #1d72b3;
+}
+.courses-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.course-card {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.course-card:hover {
+  color: yellowgreen;
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.course-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #1d72b3;
+}
+.course-card p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: #555;
+}
+.btn {
+  display: inline-block;
+  background: #1d72b3;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+.btn:hover {
+  background: #d3393d;
+}
+
+/* Subtopics Section (Detail Page) */
+.subtopics-section {
+  padding: 80px 0;
+  background: #ffffff;
+}
+.subtopics-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.subtopic-card {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.subtopic-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.subtopic-card h3 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  color: #1d72b3;
+}
+.subtopic-card p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+/* About Section */
+.about-section {
+  padding: 80px 0;
+  background: #ffffff;
+}
+.about-content {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #555;
+}
+.about-content a {
+  color: #1d72b3;
+  text-decoration: none;
+}
+.about-content a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+  background: #ffffff;
+  border-top: 1px solid #ddd;
+  text-align: center;
+  padding: 20px 0;
+  color: #777;
+  margin-top: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  .section-title {
+    font-size: 2rem;
+  }
+  .navbar li {
+    margin-left: 10px;
+  }
+}
