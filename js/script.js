@@ -3,6 +3,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const jsonURL =
     "https://raw.githubusercontent.com/Mubeen-Ahmad/urls/refs/heads/main/links.json";
 
+  // ✅ Current Page ka Name extract karna (e.g., "functional_programming.html")
+  const pagePath = window.location.pathname.split("/").pop();
+  const courseKey = pagePath.replace(".html", ""); // "functional_programming" or "dsa"
+
   fetch(jsonURL)
     .then((response) => {
       if (!response.ok) {
@@ -33,16 +37,16 @@ document.addEventListener("DOMContentLoaded", function () {
         coursesListEl.appendChild(fragment);
       }
 
-      // 🎯 Functional Programming Subtopics Render (functional.html)
+      // ✅ Current Page ke Mutabiq Subtopics Render
       const subtopicsListEl = document.getElementById("subtopics-list");
-      if (subtopicsListEl && data.courses.functional_programming?.subtopics) {
-        const functional = data.courses.functional_programming;
-        console.log(data.courses);
 
+      // ⚡ Dynamically selected courseKey ko use karo
+      if (subtopicsListEl && data.courses[courseKey]?.subtopics) {
+        const courseData = data.courses[courseKey]; // ✅ Current course ka data
         const fragment = document.createDocumentFragment();
 
-        Object.keys(functional.subtopics).forEach((key) => {
-          const subtopic = functional.subtopics[key];
+        Object.keys(courseData.subtopics).forEach((key) => {
+          const subtopic = courseData.subtopics[key];
 
           // Subtopic Card Create
           const card = document.createElement("div");
