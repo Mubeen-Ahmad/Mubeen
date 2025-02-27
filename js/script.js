@@ -37,6 +37,8 @@ document.addEventListener("DOMContentLoaded", function () {
       const subtopicsListEl = document.getElementById("subtopics-list");
       if (subtopicsListEl && data.courses.functional_programming?.subtopics) {
         const functional = data.courses.functional_programming;
+        console.log(data.courses);
+
         const fragment = document.createDocumentFragment();
 
         Object.keys(functional.subtopics).forEach((key) => {
