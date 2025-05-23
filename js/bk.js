@@ -48,14 +48,13 @@ document.addEventListener("DOMContentLoaded", function () {
         Object.keys(courseData.subtopics).forEach((key) => {
           const subtopic = courseData.subtopics[key];
 
-          // Subtopic Card Create with two buttons
+          // Subtopic Card Create
           const card = document.createElement("div");
           card.className = "subtopic-card";
           card.innerHTML = `
             <h3>${subtopic.topic_name}</h3>
             <p>${subtopic.description}</p>
             <a href="${subtopic.url}" target="_blank" class="btn">Open Notebook</a>
-            ${subtopic.html ? `<a href="${subtopic.html}" target="_blank" class="btn btn-secondary">Open with HTML</a>` : ''}
           `;
           fragment.appendChild(card);
         });
@@ -65,4 +64,3 @@ document.addEventListener("DOMContentLoaded", function () {
     })
     .catch((error) => console.error("🚨 Error fetching JSON:", error.message));
 });
-
